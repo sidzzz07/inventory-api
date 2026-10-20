@@ -36,3 +36,5 @@ def sell_item(sku: str, amount: int) -> Item:
 @app.get("/items/low-stock")
 def low_stock() -> list[Item]:
     return [item for item in inventory.values() if item.quantity <= item.reorder_level]
+    
+#reviewed
